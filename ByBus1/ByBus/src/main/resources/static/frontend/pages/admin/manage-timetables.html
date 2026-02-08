@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByBus | Manage Timetables</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/tables.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo"> <img src="/frontend/assets/images/vibrant-bus-logo-white-background_1158260-16208.avif" alt="ByBus Logo">
+        <span>ByBus</span></div>
+
+    <div class="user-info">
+        <span id="userName">Admin - Manage Timetables</span>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<!-- ================= MAIN LAYOUT ================= -->
+<div class="layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <ul>
+            <li>
+                <a href="../../pages/admin/admin-dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-users.html">
+                    Manage Users
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-buses.html">
+                    Manage Buses
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-bookings.html">
+                    Manage Bookings
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-timetables.html" class="active">
+                    Manage Timetables
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ===== CONTENT ===== -->
+    <main class="content">
+        <h2>Manage Timetables</h2>
+
+        <!-- ADD TIMETABLE -->
+        <div class="section-box">
+            <h3 id="formTitle">Add New Timetable</h3>
+
+            <input type="hidden" id="timetableId">
+
+            <select id="busSelect">
+                <option value="">-- Select Bus --</option>
+            </select>
+
+            <input type="text" id="startLocation" placeholder="Start Location">
+            <input type="text" id="endLocation" placeholder="End Location">
+            <input type="time" id="startTime">
+            <input type="time" id="endTime">
+
+            <button class="btn-primary" type="button" onclick="saveTimetable()">Save</button>
+            <button class="btn-logout" type="button" onclick="resetForm()">Cancel</button>
+        </div>
+
+        <div class="section-box">
+            <h3>Search Timetables</h3>
+            <input type="text" id="filterStart" placeholder="Start (optional)">
+            <input type="text" id="filterEnd" placeholder="Destination (optional)">
+            <button class="btn-primary" type="button" onclick="searchTimetables()">Search</button>
+            <button class="btn-logout" type="button" onclick="loadTimetables()">Clear</button>
+        </div>
+
+
+        <!-- TIMETABLE LIST -->
+        <div class="section-box">
+            <h3>Timetable List</h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Bus</th>
+                    <th>Route</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="timetableTableBody">
+                <!-- Filled by JS -->
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+<!-- Admin Manage Timetables JS -->
+<script src="../../assets/js/admin/timetable-management.js"></script>
+
+</body>
+</html>
