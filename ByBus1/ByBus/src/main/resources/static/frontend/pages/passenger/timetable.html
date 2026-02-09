@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByBus | Timetable</title>
+
+    <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/tables.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="/frontend/assets/images/vibrant-bus-logo-white-background_1158260-16208.avif" alt="ByBus Logo">
+        <span>ByBus</span>
+    </div>
+
+    <div class="user-info">
+        <span id="userName">Timetable</span>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <ul>
+            <li><a href="passenger-dashboard.html">Dashboard</a></li>
+            <li><a href="timetable.html" class="active">Timetable</a></li>
+            <li><a href="booking.html">My Bookings</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <h2>Bus Timetable</h2>
+
+        <div class="section-box">
+            <h3>Search by Locations</h3>
+            <input type="text" id="startLocation" placeholder="Start location (e.g. Colombo)">
+            <input type="text" id="endLocation" placeholder="End location (e.g. Kandy)">
+
+            <!-- No inline onclick -->
+            <button class="btn-primary" id="searchBtn">Search</button>
+            <button class="btn-logout" type="button" id="showAllBtn">Show All</button>
+        </div>
+
+        <div class="section-box">
+            <h3>Timetable List</h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Bus Number</th>
+                    <th>Route</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="timetableBody"></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="../../assets/js/passenger/timetable.js"></script>
+<script src="../../assets/js/common/navbar.js"></script>
+</body>
+</html>
