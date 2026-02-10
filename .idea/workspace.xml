@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2a146da-3999-4f7a-9e4e-77201d268f85" name="Changes" comment="" />
+    <list default="true" id="b2a146da-3999-4f7a-9e4e-77201d268f85" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ByBus1/ByBus/src/main/resources/static/frontend/assets/js/admin/timetable-management.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
