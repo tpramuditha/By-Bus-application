@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByBus | Passenger Dashboard</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/tables.css">
+</head>
+<body>
+
+<div class="passenger-dashboard">
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo"><img src="/frontend/assets/images/vibrant-bus-logo-white-background_1158260-16208.avif" alt="ByBus Logo">
+            <span>ByBus</span></div>
+
+        <div class="user-info">
+            <span id="userName">Welcome Passenger</span>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <!-- ================= MAIN LAYOUT ================= -->
+    <div class="layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="../../pages/passenger/passenger-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="../../pages/passenger/timetable.html">Search Buses</a></li>
+                <li><a href="../../pages/passenger/booking.html">My Bookings</a></li>
+            </ul>
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="content">
+            <h2 id="sectionTitle">Passenger Overview</h2>
+
+            <div id="contentArea">
+
+                <!-- DASHBOARD CARDS -->
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Upcoming Trips</h3>
+                        <p id="upcomingTrips">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Total Bookings</h3>
+                        <p id="totalBookings">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Available Buses</h3>
+                        <p id="availableBuses">0</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+</div>
+<!-- Passenger Dashboard JS -->
+<script src="../../assets/js/passenger/passenger-dashboard.js"></script>
+<script src="../../assets/js/common/navbar.js"></script>
+
+</body>
+</html>
