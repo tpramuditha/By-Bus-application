@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByBus | Manage Bookings</title>
+
+    <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/tables.css">
+
+    <style>
+        .status-not { color: green; font-weight: bold; }
+        .status-confirmed { color: blue; font-weight: bold; }
+        .status-cancelled { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="/frontend/assets/images/vibrant-bus-logo-white-background_1158260-16208.avif" alt="ByBus Logo">
+        <span>ByBus</span>
+    </div>
+
+    <div class="user-info">
+        <span id="userName">Admin</span>
+        <button class="btn-logout" type="button" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="../../pages/admin/admin-dashboard.html">Dashboard</a></li>
+            <li><a href="../../pages/admin/manage-users.html">Manage Users</a></li>
+            <li><a href="../../pages/admin/manage-buses.html">Manage Buses</a></li>
+            <li><a href="../../pages/admin/manage-bookings.html" class="active">Manage Bookings</a></li>
+            <li><a href="../../pages/admin/manage-timetables.html">Manage Timetables</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <h2>Manage Bookings</h2>
+
+        <div class="section-box">
+            <h3>All Passenger Bookings</h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Passenger</th>
+                    <th>Bus</th>
+                    <th>Route</th>
+                    <th>Travel Date</th>
+                    <th>Seats</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="bookingTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+
+</div>
+
+<script src="/frontend/assets/js/common/navbar.js"></script>
+<script src="/frontend/assets/js/admin/manage-bookings.js"></script>
+</body>
+</html>
