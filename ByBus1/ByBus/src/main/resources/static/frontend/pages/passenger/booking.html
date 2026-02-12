@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByBus | My Bookings</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/tables.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo"><img src="/frontend/assets/images/vibrant-bus-logo-white-background_1158260-16208.avif" alt="ByBus Logo">
+        <span>ByBus</span></div>
+
+    <div class="user-info">
+        <span id="userName">My Bookings</span>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<!-- ================= MAIN LAYOUT ================= -->
+<div class="layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="passenger-dashboard.html">Dashboard</a></li>
+            <li><a href="timetable.html">Search Buses</a></li>
+            <li><a href="booking.html" class="active">My Bookings</a></li>
+        </ul>
+    </aside>
+
+    <!-- ===== CONTENT ===== -->
+    <main class="content">
+        <h2>My Bookings</h2>
+
+        <!-- BOOKINGS LIST -->
+        <div class="section-box">
+            <h3>Booking History</h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Bus</th>
+                    <th>Route</th>
+                    <th>Date</th>
+                    <th>Seat</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="bookingTableBody">
+                <!-- Filled by JS -->
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+<!-- JS -->
+<script src="../../assets/js/passenger/booking.js"></script>
+<script src="../../assets/js/common/navbar.js"></script>
+
+</body>
+</html>
