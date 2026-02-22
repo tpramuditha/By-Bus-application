@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByBus | Admin Dashboard</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/tables.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo"> <img src="/frontend/assets/images/vibrant-bus-logo-white-background_1158260-16208.avif" alt="ByBus Logo">
+        <span>ByBus</span></div>
+
+    <div class="user-info">
+        <span id="userName">Admin Panel</span>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<!-- ================= MAIN LAYOUT ================= -->
+<div class="layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <ul>
+            <li>
+                <a href="../../pages/admin/admin-dashboard.html" class="active">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-users.html">
+                    Manage Users
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-buses.html">
+                    Manage Buses
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-bookings.html">
+                    Manage Bookings
+                </a>
+            </li>
+            <li>
+                <a href="../../pages/admin/manage-timetables.html">
+                    Manage Timetables
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- ===== CONTENT ===== -->
+    <main class="content">
+        <h2>Admin Dashboard</h2>
+
+        <!-- DASHBOARD CARDS -->
+        <div class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Buses</h3>
+                <p id="totalBuses">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Bookings</h3>
+                <p id="totalBookings">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Active Trips</h3>
+                <p id="activeTrips">0</p>
+            </div>
+
+        </div>
+
+        <!-- SYSTEM STATUS -->
+        <div class="section-box">
+            <h3>System Status</h3>
+            <p>Backend: <strong class="status-ok">Running</strong></p>
+            <p>Database: <strong class="status-ok">Connected</strong></p>
+            <p>WebSocket: <strong class="status-ok">Active</strong></p>
+        </div>
+
+    </main>
+</div>
+
+<!-- Admin Dashboard JS -->
+<script src="../../assets/js/admin/admin-dashboard.js"></script>
+<script src="../../assets/js/common/navbar.js"></script>
+
+</body>
+</html>

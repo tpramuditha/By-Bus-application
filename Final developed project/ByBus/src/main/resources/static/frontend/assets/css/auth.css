@@ -1,0 +1,113 @@
+/* ================= AUTH PAGE STYLES ================= */
+
+body {
+    background: radial-gradient(900px 500px at 15% 10%, rgba(59,130,246,0.25), transparent 55%),
+                linear-gradient(180deg, #071022, #070b15);
+    min-height: 100vh;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+            url("/frontend/assets/images/bus2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* Auth Card */
+.auth-container {
+    width: 420px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.14);
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    color: #fff;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+
+/* Title */
+.auth-container h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.auth-container input,
+.auth-container select {
+    width: 100%;
+    padding: 12px 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    outline: none;
+}
+
+.auth-container input::placeholder {
+    color: rgba(255,255,255,0.55);
+}
+
+.auth-container input:focus,
+.auth-container select:focus {
+    border-color: rgba(59,130,246,0.75);
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.18);
+}
+
+
+/* Button */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 900;
+    background: linear-gradient(180deg, rgba(59,130,246,1), rgba(37,99,235,1));
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.auth-container button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+/* Links */
+.auth-container p {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+
+.auth-container a {
+    color: #93c5fd;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.auth-container a:hover { text-decoration: underline; }
+
+/* Error / Success Message */
+.auth-message { text-align: center; margin-bottom: 10px; font-size: 14px; }
+.auth-message.error { color: #fecaca; }
+.auth-message.success { color: #bbf7d0; }
